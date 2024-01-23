@@ -9,7 +9,14 @@ REM * VERSIÓN: 2024-01-23
 REM *
 REM *******************************
 
-for /L %%i in (1 2 21) do(
-    echo Los valores con rango son %%i
+set /p num= Introduce el numero maximo
+echo calculando la media entre 1 y %num%
+set media=0
+setlocal enabledelayedexpansion
+for /L %%i in (1 1 %num%) do (
+	set /a media+=%%i
+    echo En la iteracion %%i la media vale %media% o !media!
 )
-
+set /a media/=num
+echo la media es %media%
+REM endlocal
