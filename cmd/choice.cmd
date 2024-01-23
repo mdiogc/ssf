@@ -38,7 +38,29 @@ echo 4. Dividir
 
 choice /C 1234 /M "Elige entre una de las opciones "
 
-if %errorlevel% EQU 1 set /a res=a+b
-if %errorlevel% EQU 1 set /a res=a-b
-if %errorlevel% EQU 1 set /a res=a*b
-if %errorlevel% EQU 1 set /a res=a/b
+if %errorlevel% EQU 1 set /a res=a+b call :Sumar %a% %b%
+if %errorlevel% EQU 1 set /a res=a-b call :Restar %a% %b%
+if %errorlevel% EQU 1 set /a res=a*b call :Multiplicar %a% %b%
+if %errorlevel% EQU 1 set /a res=a/b call :Dividir %a% %b%
+
+exit /b 0
+
+:Sumar
+ set /a res=%1 + %2
+ echo el resultado de la suma es %res%
+ exit /b 0
+
+:Restar
+ set /a res=%1 - %2
+ echo el resultado de la resta es %res%
+ exit /b 0
+
+:Multiplicar
+set /a res=%1 * %2
+ echo el resultado de la multiplicacion es %res%
+ exit /b 0
+
+:Dividir
+set /a res=%1 / %2
+ echo el resultado de la dividir es %res%
+ exit /b 0
