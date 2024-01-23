@@ -22,7 +22,7 @@ for  %%i in (1, 56, 765 34 23 56) do (
 REM Bucle por RANGO (usar /L)
 REM           ini step end
 for /L %%i in (1   2    21) do(
-    echo Los valores scon rango son %%i
+    echo Los valores con rango son %%i
 )
 
 echo.
