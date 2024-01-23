@@ -27,3 +27,24 @@ for /L %%i in (1   2    21) do(
 
 echo.
 pause
+
+echo Iterar por ficheros:
+REM Debo indicar el nombre del fichero o los comodines: *  *.??? a*.cmd
+for %%f in (b*.???) do  (
+    echo los ficheros son %%f
+)
+echo.
+pause
+
+echo Iterar por directorios:
+REM debo indicar /D y el nomvbbre del directorio o los comodines: * b*d
+for /D %%D in (*) do (
+    echo los 
+)
+
+
+
+
+
+
+
